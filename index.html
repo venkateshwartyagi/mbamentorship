@@ -28,14 +28,18 @@
       align-items: center;
       border-bottom: 1px solid #ddd;
     }
-    nav a {
-      margin-left: 1.5rem;
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .nav-links a {
       text-decoration: none;
       color: #333;
       font-weight: 600;
       transition: color 0.3s;
     }
-    nav a:hover {
+    .nav-links a:hover {
       color: #007BFF;
     }
     .hero {
@@ -171,10 +175,13 @@
       }
       header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
       }
-      nav a {
-        margin: 0.5rem 0;
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
       }
     }
   </style>
@@ -182,12 +189,12 @@
 <body>
   <header>
     <div><strong>PPG Preferential</strong></div>
-    <nav>
+    <div class="nav-links">
       <a href="#services">Services</a>
       <a href="#journey">Our Journey</a>
       <a href="#team">The Team</a>
       <a href="#contact">Contact</a>
-    </nav>
+    </div>
   </header>
 
   <section class="hero">
